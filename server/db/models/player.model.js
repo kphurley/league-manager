@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require('../db');
+var db = require('../_db');
 var Sequelize = require('sequelize');
 
 //TODO - ADDRESSES?  PHONE NUMBERS?

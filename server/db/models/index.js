@@ -11,7 +11,7 @@ var Game = require('./game.model');
 var TeamGameStat = require('./team.game.stat.model');
 var PlayerGameStat = require('./player.game.stat.model');
 var League = require('./league.model');
-var Role = require('./role.model')
+var Role = require('./role.model');
 
 //TODO - MAY NEED TO CHANGE THIS TO MANY TO MANY ONCE MULTIPLE LEAGUES SUPPORTED
 League.hasMany(User);

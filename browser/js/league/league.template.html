@@ -1,0 +1,12 @@
+<!--league.template.html-->
+<div class="container">
+  <div ng-repeat="league in leagues">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 col-lg-6">
+        <h2>{{ league.name }}</h2>
+        <span><a ui-sref="manageLeague({id: league.id})"> Manage League </a></span> |
+        <span><a href='#'> Delete League </a></span>
+      </div>
+    </div>
+  </div>
+</div>

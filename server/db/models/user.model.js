@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require('../db');
+var db = require('../_db');
 var Sequelize = require('sequelize');
 
 //TODO HASH PASSWORDS
@@ -8,14 +8,14 @@ var Sequelize = require('sequelize');
 module.exports = db.define('user', {
   email: {
     type: Sequelize.STRING,
-    allowNull: false
-  },
-  password: {
-    type: Sequelize.STRING,
     allowNull: false,
     validate: {
       isEmail: true
     }
+  },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 });
 

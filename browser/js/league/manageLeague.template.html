@@ -1,0 +1,15 @@
+<!--manageLeague.template.html-->
+<div class="container">
+  <h2>{{ league.name }}</h2>
+
+  <div ng-show='hasSeasons()' class='row' ng-repeat='season in seasons'>
+    {{ season.name }}
+  </div>
+
+  <div ng-hide='hasSeasons()' class='row' ng-repeat='season in seasons'>
+    No season data for this league.
+  </div>
+
+  <button class="btn btn-default">Add Season</button>
+
+</div>
