@@ -3,14 +3,18 @@
 var db = require('../db');
 var Sequelize = require('sequelize');
 
-//TODO HASH PASSWORDS
+//TODO - ADDRESSES?  PHONE NUMBERS?
 
-module.exports = db.define('user', {
-  email: {
+module.exports = db.define('player', {
+  firstName: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  password: {
+  lastName: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  email: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
@@ -18,4 +22,3 @@ module.exports = db.define('user', {
     }
   }
 });
-
