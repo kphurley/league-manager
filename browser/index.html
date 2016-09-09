@@ -6,44 +6,65 @@
     <base href="/">
     <script src="/jquery/dist/jquery.min.js" defer></script>
     <script src="/bootstrap/dist/js/bootstrap.min.js" defer></script>
+
     <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
+
     <script src="/angular/angular.js" defer></script>
     <script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
 
     <script src="/js/module.js" defer></script>
-
-    <script src="/js/navbar/navbar.directive.js" defer></script>
-
-    <script src="/js/home/home.state.js" defer></script>
-
-    <script src="/js/user/user.factory.js" defer></script>
+    <script src="/js/main.controller.js" defer></script>
 
     <script src="/js/auth/auth.factory.js" defer></script>
+
+    <script src="/js/home/home.state.js" defer></script>
+    <script src="/js/home/home.controller.js" defer></script>
+
+
+    <script src="/js/league/league.controllers.js" defer></script>
+    <script src="/js/league/league.factory.js" defer></script>
+    <script src="/js/league/league.states.js" defer></script>
 
     <script src="/js/login/login.controller.js" defer></script>
     <script src="/js/login/login.factory.js" defer></script>
     <script src="/js/login/login.states.js" defer></script>
 
-    <script src="/js/league/league.controllers.js" defer></script>
-    <script src="/js/league/league.factory.js" defer></script>
-    <script src="/js/league/league.states.js" defer></script>
+    <script src="/js/navbar/navbar.directive.js" defer></script>
+
+    <script src="/js/season/season.controllers.js" defer></script>
+    <script src="/js/season/season.factory.js" defer></script>
+    <script src="/js/season/season.states.js" defer></script>
+
+    <script src="/js/sidebar/sidebar.directive.js" defer></script>
+
+    <script src="/js/team/team.controllers.js" defer></script>
+    <script src="/js/team/team.factory.js" defer></script>
+    <script src="/js/team/team.states.js" defer></script>
+
+    <script src="/js/user/user.factory.js" defer></script>
+
+
 
 
 
   </head>
 
   <body ng-app="leaguemanager">
-
-    <navbar></navbar>
-    <ui-view></ui-view>
-
+      <navbar></navbar>
+      <sidebar></sidebar>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ui-view></ui-view>
+      </div>
   </body>
 
   <footer>
   </footer>
 
 </html>
+
+
 
 
 

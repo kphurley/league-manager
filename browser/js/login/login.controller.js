@@ -6,7 +6,7 @@ app.controller('LoginCtrl', function ($scope, AuthFactory, $state) {
 
     AuthFactory.login(credentials)
     .then(function() {
-      $state.go('league');
+      $state.go('home');
     });
   }
 });

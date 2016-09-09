@@ -4,7 +4,7 @@
 app.config(function ($stateProvider) {
 
   $stateProvider
-  .state('league', {
+  /*.state('league', {
     url: '/league',
     templateUrl: '/js/league/league.template.html',
     controller: 'LeagueCtrl',
@@ -16,7 +16,7 @@ app.config(function ($stateProvider) {
         });
       }
     }
-  })
+  })*/
   .state('createLeague', {
     url: '/createLeague',
     templateUrl: '/js/league/createLeague.template.html',

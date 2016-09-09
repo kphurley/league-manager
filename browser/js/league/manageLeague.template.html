@@ -1,15 +1,21 @@
 <!--manageLeague.template.html-->
-<div class="container">
+<div>
   <h2>{{ league.name }}</h2>
 
-  <div ng-show='hasSeasons()' class='row' ng-repeat='season in seasons'>
-    {{ season.name }}
-  </div>
+  <form class="form-inline">
+    <div class="form-group" ng-show='hasSeasons()'>
+      <label for="seasonSelector">Season:</label>
+      <select class="form-control" ng-options="season as season.name for season in seasons track by season.id" ng-model="selected"></select>
+      <a class="btn btn-default" ui-sref="season({seasonId: selected.id})">Go</a>
+    </div>
+    <button class="btn btn-default" ng-click="createSeason()">Add Season</button>
+  </form>
 
-  <div ng-hide='hasSeasons()' class='row' ng-repeat='season in seasons'>
+
+  <div ng-hide='hasSeasons()'>
     No season data for this league.
   </div>
 
-  <button class="btn btn-default">Add Season</button>
+  <ui-view></ui-view>
 
 </div>

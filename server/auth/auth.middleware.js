@@ -10,13 +10,15 @@ Auth.isAuthenticated = function (req) {
 
 Auth.isAdmin = function (req) {
   var _roles, isLeagueAdmin;
-  return req.user.getRoles()
-  .then(function(roles) {
-    _roles = roles.filter(r => r.isLeagueAdmin);
+  if(req.user){
+    return req.user.getRoles()
+    .then(function(roles) {
+      _roles = roles.filter(r => r.isLeagueAdmin);
 
-    return req.user && _roles.length > 0;
-  })
-  //return false;
+      return req.user && _roles.length > 0;
+    })
+  }
+  return false;
 };
 
 Auth.isSelf = function (req) {

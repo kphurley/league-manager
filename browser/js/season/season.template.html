@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>{{ season.name }}</h2>
+
+  <div>
+    <h3>Teams</h3>
+    <div ng-show='hasTeams()' class='row' ng-repeat='team in teams'>
+      <span><a ui-sref="team({teamId: team.id})">{{ team.name }}</a>
+    </div>
+
+    <div ng-hide='hasTeams()' class='row'>
+      No teams associated with this season.
+    </div>
+
+    <button class="btn btn-default" ng-click="findOrCreateTeam()">Add Team To This Season</button>
+  </div>
+
+  <div>
+    <h3>Schedule of Games</h3>
+    <div ng-show='hasGames()' class='row'>
+      <span><a ui-sref="team({teamId: team.id})">{{ team.name }}</a>
+    </div>
+
+    <div ng-hide='hasGames()' class='row'>
+      No games associated with this season.
+    </div>
+
+    <button class="btn btn-default">Add Games To This Season</button>
+  </div>
+
+  <div>
+    <h3>Team Stats</h3>
+    <div ng-show='hasTeamStats()' class='row'>
+      <span><a ui-sref="team({teamId: team.id})">{{ team.name }}</a>
+    </div>
+
+    <div ng-hide='hasTeamStats()' class='row'>
+      No team stats associated with this season.
+    </div>
+
+    <button class="btn btn-default">Add Team Stats To This Season</button>
+  </div>
+
+  <div>
+    <h3>Player Stats</h3>
+    <div ng-show='hasPlayerStats()' class='row'>
+      <span><a ui-sref="team({teamId: team.id})">{{ team.name }}</a>
+    </div>
+
+    <div ng-hide='hasPlayerStats()' class='row'>
+      No player stats associated with this season.
+    </div>
+
+    <button class="btn btn-default">Add Player Stats To This Season</button>
+  </div>
+
+
+</div>

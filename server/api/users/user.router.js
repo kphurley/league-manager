@@ -16,22 +16,6 @@ router.param('id', function (req, res, next, id) {
   .catch(next);
 });
 
-/*router.get('/', Auth.assertAuthenticated, function (req, res, next) {
-  User.findAll({})
-  .then(function (users) {
-    res.json(users);
-  })
-  .catch(next);
-});
-
-router.post('/', Auth.assertAdmin, function (req, res, next) {
-  User.create(req.body)
-  .then(function (user) {
-    res.status(201).json(user);
-  })
-  .catch(next);
-});*/
-
 router.get('/:id', function (req, res, next) {
   req.requestedUser.reload()
   .then(function (requestedUser) {
